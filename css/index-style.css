@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: "Unna", serif;
+    background: rgb(198, 181, 167);
+    color: rgb(211, 199, 193);
+    line-height: 1.3;
+    /*background-image: url(../img/logo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 100vh; */
+}
+/*
+body::before{
+    content: ""
+    position: absolute;
+    inset: 0;
+
+    backdrop-filtrer: blur(8px);
+    z-index: -1
+}*/
+h1{
+    font-family: "Londrina Outline",serif;
+    text-align: center;
+    font-size:xxx-large;
+}
+main{
+    width: 1400px;
+    margin: 10px auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background: rgb(97, 55, 23);
+    border-radius: 20px;
+}
+
+
+.presentacion{
+    text-align:end;
+    position:  left; /*Version 1: texto centrado*/
+    margin: 0 10px;
+    padding: 0 80px;
+}
+
+.presentacion img{
+    width:240px; 
+    height:auto;
+    border-radius: 15px; 
+    box-shadow: 0 3px 8px ;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.presentacion h2{
+    font-family: "Londrina Outline",serif;
+    text-align: center;
+    font-size:xx-large;
+}
+
+.habilidades{
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.habilidades h2{
+    font-family:"Unna", serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.habilidades .descripcion{
+    margin-bottom: 26px;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.contenedor-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: rgba(227, 200, 157, 0.527);
+    /*backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);*/
+    color: rgb(78, 33, 5);
+    border: 2px solid rgb(112, 83, 37);
+    border-radius: 12px;
+    padding: 8px;
+    min-height: 160px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 18px 30px rgba(255,255,255,0.55);
+}
+
+.card h3{
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+}
+
+.card p{
+    line-height: 1.45;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+footer{
+    background: rgba(130, 88, 29, 0.701);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px 20px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-contacto .footer-nav{
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-contacto h3, .footer-nav h3{
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+
+.footer-nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li{
+    margin-bottom: 8px;
+}
+
+.footer-nav a{
+    text-decoration: none;
+    color: aliceblue;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover{
+    color: brown;
+}
+
+.footer-copy{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.87rem;
+    grid-column: 1 / -1;
+}
+
+.flip-section{
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.flip-section h2{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.flip-section p{
+    margin-bottom: 26px;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.flip-contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flip-card{
+    width: 220px;
+    height: 280px;
+    perspective: 1000px;
+    position: relative;
+}
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-shadow: 0 6px 12px rgba(233, 211, 211, 0.9);
+}
+
+.flip-card-front{
+    background: rgba(243, 215, 215, 0.9);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+.flip-card-front h3{
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    margin: 0;
+}
+
+.flip-card-back{
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(139,139,139,0.2);
+    transform: rotateY(180deg);
+
+}
+
+.flip-card-back img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.flip-card-back img:hover{
+    transform: scale(1.05);
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;    
+}
+
+.modal-contenendor{
+    margin: 0;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgb(184, 169, 169); 
+    animation: zoom 0.3s ease;
+}
+
+@keyframes zoom{
+    from{ transform: scale(0.7); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.cerrar{
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cerrar:hover{
+    color: rgb(130, 90, 16);
+}
